@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Add DOI Link in Reaxys
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.4
 // @description  Add a doi direct link after 'Full Text'
 // @author       Wehnes
 // @match        https://www.reaxys.com/
