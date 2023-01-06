@@ -2,7 +2,7 @@
 A user script that can add a DOI direct link after Full Text buttom.
 
 # How to use
-By TamperMonkey or other userscript manager.
+By TamperMonkey or other userscript manager. Please ensure you have access to reaxys.
 
 # Bugs existed
 - Sometimes the DOI link will be created repeatly. I have no idea but every buttom still works.
