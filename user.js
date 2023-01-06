@@ -16,7 +16,7 @@
     window.onhashchange = function () {
         var i = 0;
         waitForKeyElements(".els-btn.els-btn-link.blue-compact.els-btn-xs.e2e-full-text", re);
-        setInterval(re, 1000);
+        setTimeout(re, 1000);
         function re(){
             var li,doi,a,doi_a;
             li = $(".els-btn.els-btn-link.blue-compact.els-btn-xs.e2e-full-text");
@@ -24,18 +24,18 @@
                 doi = li[i].getAttribute("data-doi");
                 if (doi != null){
                     doi_a = doi.replace(/\//g,'_');
-                    if ($("a#settled_doi_" + doi_a).length != 1){
+                    if ($("a#settled_doi_" + i).length != 1){
                         doi = "https://doi.org/" + doi;
                         a = document.createElement("a");
                         li[i].after(a);
                         a.setAttribute("href", doi);
-                        a.setAttribute("id", "settled_doi_" + doi_a);
+                        a.setAttribute("id", "settled_doi_" + i);
                         a.setAttribute("target","_blank");
                         a.innerHTML = 'DOI';
                     }
                 }
             }
-            console.log('done');
+            console.log('doi link done');
         }
     };
 })();
